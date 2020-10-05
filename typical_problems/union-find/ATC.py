@@ -1,4 +1,5 @@
 # https://atcoder.jp/contests/atc001/tasks/unionfind_a
+# 同じグループに属しているかわかる
 
 class UnionFind():
     def __init__(self, n):
