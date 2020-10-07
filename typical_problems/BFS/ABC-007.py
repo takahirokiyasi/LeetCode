@@ -12,7 +12,7 @@ sx -= 1
 gy -= 1
 gx -= 1
 
-d = [[float("inf")] * c for i in range(r)]
+d = [[-1] * c for i in range(r)]
 # 1ノード降りるときにforで回せるようリスト化しておく
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
@@ -33,15 +33,15 @@ while que:
         break
     #　それ以外の時は，接している点を4方向順に取得。一つずつ処理する。
     for i in range(4):
-        nx = p[0] + dx[i]
-        ny = p[1] + dy[i]
+        ny = p[0] + dy[i]
+        nx = p[1] + dx[i]
 
         # 新しく取得した座標に対しての処理
         # 迷路内に存在する座標であり，壁ではなく，まだ通ったことがなくdがinfの点なら処理する = 新しく取得した道候補の1つ
-        if 0 <= nx < r and 0 <= ny < c and maze[nx][ny] != "#" and d[nx][ny] == float("inf"):
+        if 0 <= ny < r and 0 <= nx < c and maze[ny][nx] != "#" and d[ny][nx] == -1:
             # 道候補をqueに加える。
-            que.append((nx, ny))
+            que.append((ny, nx))
             # その道候補への経路までにかかった経路をdに加える。
-            d[nx][ny] = d[p[0]][p[1]] + 1
+            d[ny][nx] = d[p[0]][p[1]] + 1
 
 print(d[gy][gx])
