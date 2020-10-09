@@ -15,7 +15,7 @@ d = [[-1] * c for i in range(r)]
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-que = deque([])
+que = deque()
 que.append((sy, sx))
 
 d[sy][sx] = 0
