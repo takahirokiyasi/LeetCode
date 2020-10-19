@@ -15,8 +15,6 @@ if __name__ == "__main__":
     src = sample(arr, len(arr))
 
     print(src)
-    # [7, 2, 5, 3, 1, 6, 9, 4, 8, 0]
 
     dst = babble_sort(src)
     print(dst)
-    # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
