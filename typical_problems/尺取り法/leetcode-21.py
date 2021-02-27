@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/3sum-closest/
+# しゃくとり法は条件を満たす区間を全列挙する手法
 from typing import List
 
 
