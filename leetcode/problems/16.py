@@ -1,5 +1,6 @@
 from typing import List
 # https://leetcode.com/problems/3sum-closest/submissions/
+# 一つの変数だけ決めてあとは一番大きい方と小さい方で狭めていく方が早い
 
 
 class Solution:
