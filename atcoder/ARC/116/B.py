@@ -11,3 +11,5 @@ for i in range(n-2, -1, -1):
     ans += (tmp*t) % MOD
     ans += (tmp*tmp) % MOD
     t = (2*t + tmp) % MOD
+
+print(ans % MOD)
